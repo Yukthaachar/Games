@@ -1,0 +1,78 @@
+body {
+    background-image: url("{% static 'images/guess.jpeg' %}");
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.container {
+    border-radius: 15px;
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(73, 80, 87, 0.9); /* Semi-transparent background */
+}
+
+.card-header {
+    border-radius: 15px;
+    background-color: #007bff;
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #6c757d;
+}
+
+.cartoon-message {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    animation: pop 0.5s ease-in-out;
+    text-align: center;
+}
+
+.too-low {
+    background-color: #ff4757;
+}
+
+.too-high {
+    background-color: #ffa502;
+}
+
+.correct {
+    background-color: #2ed573;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
